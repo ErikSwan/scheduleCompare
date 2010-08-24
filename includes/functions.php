@@ -452,6 +452,17 @@ function build_schedule_form($errors = null, $fromdb = false) {
 		    echo "</ul>";
 	    }
 	 ?>
+	 <script type="text/javascript" src="/js/autocompletion.js"></script>
+	 <script type="text/javascript" >
+	 function setValue(str,myName)
+	 {
+	     document.getElementById(myName).value=str;
+	     $('#' + myName).change();
+	     document.getElementById("autoSuggestionsList").innerHTML="";
+	 }
+	 </script>
+	 <div id="autoSuggestionsList" style="position: relative; top: -4px; width='100px;'" > </div>
+	 
 	<form action="/schedule/edit" method="post" name="schedule" id="schedule">
 	<table border="0" id="schedule_table">
 	<thead>
@@ -507,7 +518,7 @@ function build_schedule_form($errors = null, $fromdb = false) {
 				?>
 			<td>
 			<p class="classname js">Open hour</p>
-			Class #: <input name="t<?php echo $j; ?>_h<?php echo $i; ?>_class" class="classinput" type="text" <?php if(!empty($class_submit)) echo 'value="'.$class_submit.'"'; ?> size="4" /><br />
+			Class #: <input name="t<?php echo $j; ?>_h<?php echo $i; ?>_class" class="classinput" id="t<?php echo $j; ?>_h<?php echo $i; ?>_class" onkeyup="getInfo(this.value,200,'t<?php echo $j; ?>_h<?php echo $i; ?>_class')" type="text" <?php if(!empty($class_submit)) echo 'value="'.$class_submit.'"'; ?> size="4" /><br />
 			Teacher:<br /><select name="t<?php echo $j; ?>_h<?php echo $i; ?>_teacher" class="teacherselect">
 			<?php echo $new_form; ?>
 			</select>
@@ -516,7 +527,7 @@ function build_schedule_form($errors = null, $fromdb = false) {
 			<p class="jshide">Skinny:</p>
 			<div class="skinny jshide <?php if(!empty($class_submit_2)) echo 'js'; ?>">
 			<p class="classname js">Open hour</p>
-			Class #: <input name="t<?php echo $j; ?>_h<?php echo $i; ?>_class_2" class="classinput" type="text" <?php if(!empty($class_submit_2)) echo 'value="'.$class_submit_2.'"'; ?> size="4" /><br />
+			Class #: <input name="t<?php echo $j; ?>_h<?php echo $i; ?>_class_2" class="classinput" id="t<?php echo $j; ?>_h<?php echo $i; ?>_class_2" onkeyup="getInfo(this.value,200,'t<?php echo $j; ?>_h<?php echo $i; ?>_class_2')" type="text" <?php if(!empty($class_submit_2)) echo 'value="'.$class_submit_2.'"'; ?> size="4" /><br />
 			Teacher:<br /><select name="t<?php echo $j; ?>_h<?php echo $i; ?>_teacher_2" class="teacherselect">
 			<?php echo $new_form_2; ?>
 			</select>
