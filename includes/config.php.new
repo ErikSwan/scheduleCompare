@@ -1,0 +1,22 @@
+<?php
+//config.php
+
+$config['dbname'] = '';
+$config['tableprefix'] = '';
+$config['username'] = '';
+$config['password'] = '';
+$config['basedomain'] = 'schedules.erikswan.net'; /* the base domain of the site installation, like schedules.erikswan.net */
+$config['baseurl'] = "http://".$config['basedomain']."/"; /* do not change this */
+define('DEBUG', false);
+
+/* this should be a long, random value that should not be revealed at any point. You must keep this private */
+$config['salt'] = '';
+
+
+/* do not change anything below */
+define('MYSQL', DIR.'includes/mysql.php');
+define('TABLE_PREFIX', $config['tableprefix']);
+define('SALT', $config['salt']);
+define('BASE', $config['baseurl']);
+
+?>

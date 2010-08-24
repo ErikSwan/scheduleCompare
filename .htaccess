@@ -1,0 +1,13 @@
+Options +FollowSymLinks 
+
+RewriteEngine On
+# If you want to ban anyone, you can do so by uncommenting
+# the lines below and changing the IP Address to match the
+# one you want to ban.
+# RewriteCond %{REMOTE_HOST} 0.0.0.0
+# RewriteRule ^.*$ banned.html [NC,L]
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]

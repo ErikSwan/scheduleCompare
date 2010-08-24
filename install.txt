@@ -1,0 +1,9 @@
+To install this, upload all the files to the directory of your choosing, then
+create a new MySQL database using the tool of your choice and import the erik_schedules.sql
+file through phpMyAdmin or another tool.
+
+Set the appropriate variables in includes/config.php. The base domain is important
+for cookies, sessions, and various redirects to work correctly. You'll also want
+to generate a long random value for the salt. :)
+
+I will provide more detailed instructions in the future, this is just a quickie.
