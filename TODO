@@ -1,0 +1,10 @@
+There is lots to do and many ways in which the current code could
+be improved. Some quick items off the top of my head:
+
+- Add commenting system
+- Fix select field bugs with Chrome/IE on the edit schedule page
+  (remove them instead of hiding - keeped cloned copy to restore)
+- Replace everything with autosuggest?
+- Implement forgot password functionality
+- Rewrite using OOP
+- Approved members/"friends"
