@@ -5,7 +5,7 @@
 For prospective employers and other interested parties:
 This project is old, outdated, and to be quite honest, coded with the grace of a socially awkward penguin trying to run a marathon (read: really, really poorly). I wrote it very quickly several years ago while I was still in high school. 
 
-If I still had a use for the project, I would go back and re-build it from the ground up using something sensible and modern, like Ruby on Rails, Django, or at the very least an MVC approach with OO PHP. I’m leaving it available in case anyone wants to take a look (and it is pretty cool from the front-end), but let it be known that I am well aware that it violates pretty much every programming practice in the book. With that said, the original content of the readme follows...
+If I still had a use for the project, I would go back and re-build it from the ground up using something sensible and modern, like Ruby on Rails, Django, or at the very least an MVC approach with OO PHP. I’m leaving it available in case anyone wants to take a look (and it is pretty cool from the front-end), but let it be known that I am well aware that it violates pretty much every programming best practice in the book. With that said, the original content of the readme follows...
 
 ## Readme
 This is the first release of scheduleCompare, a PHP-based web application that allows students to compare school schedules quickly and easily.
